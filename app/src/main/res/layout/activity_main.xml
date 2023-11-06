@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Display EditText -->
+    <EditText
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="right"
+        android:hint="@string/app_name"
+        android:textSize="24sp" />
+
+    <!-- Calculator Buttons -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/display"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:columnCount="5"
+        android:rowCount="6">
+
+        <!-- Memory Buttons -->
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="MC" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="MR" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="MS" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="M+" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="M-" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onBackspaceClick"
+            android:text="←" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onClearEntryClick"
+            android:text="CE" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onClearClick"
+            android:text="C" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onPlusMinusClick"
+            android:text="+-" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onSquareRootClick"
+            android:text="sqrt" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="7" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="8" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="54dp"
+            android:layout_height="64dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="9" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onOperatorClick"
+            android:text="/" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onPercentClick"
+            android:text="%" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="4" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="5" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="6" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onOperatorClick"
+            android:text="*" />
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onInverseClick"
+            android:text="1/x" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="45dp"
+            android:layout_height="75dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="1" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="2" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="45dp"
+            android:layout_height="78dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onButtonClick"
+            android:text="3" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onOperatorClick"
+            android:text="-" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_rowSpan="2"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onEqualsClick"
+            android:text="=" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="2"
+            android:onClick="onButtonClick"
+            android:text="0" />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onDecimalClick"
+            android:text="." />
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="onOperatorClick"
+            android:text="+" />
+    </GridLayout>
+</RelativeLayout>
